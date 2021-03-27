@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
     public void Animation(View view) {
         ImageView imageView= findViewById(R.id.imageView);
        // imageView.animate().alpha(0).setDuration(2000);
-      // imageView.animate().translationYBy(250).setDuration(2000);
-        imageView.animate().translationXBy(250).setDuration(2000);
+       // imageView.animate().translationYBy(250).setDuration(2000);
+       // imageView.animate().translationXBy(250).setDuration(2000);
+        imageView.animate().rotation(180).setDuration(2000);
     }
 }
