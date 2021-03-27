@@ -3,6 +3,7 @@ package com.snovia.android_animation;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.MediaController;
 import android.widget.VideoView;
 
 public class VideoActivity extends AppCompatActivity {
@@ -13,6 +14,9 @@ public class VideoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_video);
         VideoView videoView= findViewById(R.id.videoView);
         videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.video);
+        MediaController mediaController= new MediaController(this);
+        mediaController.setAnchorView(videoView);
+        videoView.setMediaController(mediaController);
         videoView.start();
     }
 }
