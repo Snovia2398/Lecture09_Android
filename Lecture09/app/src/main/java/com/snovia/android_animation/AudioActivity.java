@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.View;
 
 public class AudioActivity extends AppCompatActivity {
 
@@ -15,5 +16,13 @@ public class AudioActivity extends AppCompatActivity {
 
         mp = MediaPlayer.create(this,R.raw.audio);
         mp.start();
+    }
+
+    public void Play(View view) {
+        mp.start();
+    }
+
+    public void Pause(View view) {
+        mp.pause();
     }
 }
